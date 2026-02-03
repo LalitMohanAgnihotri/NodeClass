@@ -1,0 +1,12 @@
+{
+  "name": "nodejsclass",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lait Agnihotri",
+  "license": "ISC",
+  "description": ""
+}
