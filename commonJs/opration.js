@@ -1,0 +1,11 @@
+const {add ,multi,sub,div ,pow} =require('./math.cjs');
+const result=add(5,10);
+console.log(`The sum is: ${result}`);
+const result2=multi(5,10);
+console.log(`The product is: ${result2}`);
+const result3=sub(10,5);
+console.log(`The difference is: ${result3}`);
+const result4=div(2,3);
+console.log(`The quotient is: ${result4}`);
+const result5=pow(2,3);
+console.log(`The power is: ${result5}`);
