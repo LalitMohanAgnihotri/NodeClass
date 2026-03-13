@@ -1,8 +1,9 @@
-import express from 'express';
-
-import userRoutes from "./routes/userRoutes.js";
-const app = express();
-const port = 3000;
+import express from "express";
+import app from "./app.js";
+import dotenv from "dotenv";
+dotenv.config();
+const port = process.env.PORT;
+console.log("PORT:", port);
 
 // app.get("/",(req,res)=>{
 //     res.send("server setup successfully done");
@@ -17,8 +18,8 @@ const port = 3000;
 //   res.send({message:"home page",client:userId});
 // });
 
-app.use("/",userRoutes);
+console.log("-----------Server is starting...");
 
-app.listen(port,()=>{
-    console.log(`Server is running on port ${port}`);
+app.listen(Number(port), () => {
+  console.log(`Server is running on port ${port}`);
 });

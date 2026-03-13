@@ -1,0 +1,9 @@
+###
+POST http://localhost:3000/adduser
+{
+  "name": "Lalit",
+  "id":"5",
+}
+
+###
+app.get()
