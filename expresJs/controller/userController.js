@@ -7,6 +7,12 @@ export const getuser = (req, res) => {
 
 export const getuserById = (req, res) => {
   const userId = req.params.id;
+  const name = req.query.name;
+  const header = req.headers;
+  console.log("userId", userId);
+  console.log("name", name);
+  console.log("header", header);
+
   userModuels.map((user) => {
     if (user.id == userId) {
       res.send(user);
@@ -15,7 +21,8 @@ export const getuserById = (req, res) => {
 };
 
 export const adduser = (req, res) => {
-  console.log("req",req.body);
-  res.json(req.body);
+  const userData = req.body;
+  console.log("userData", userData);
+  res.json({message: "user added successfully", user: userData});
 };
 console.log("-----------Server is starting...");
