@@ -5,9 +5,19 @@ import {getuser} from "../controller/userController.js";
 import {getuserById} from "../controller/userController.js";
 import {adduser} from "../controller/userController.js";
 
-routes.get("/getuser",getuser);
-routes.get("/getuser/:id",getuserById);
-console.log("-----------Server is starting...");
+// routes.get("/getuser",getuser);
+// routes.get("/getuser/:id",getuserById);
+// routes.post("/adduser",adduser);
 
-routes.post("/adduser",adduser);
+routes.get("/user",getuser);
+routes.get("/user/:id",getuserById);
+routes.post("/user",adduser);
+
+ 
+routes
+.route("/user")
+.get(getuser)
+.post(adduser);
+
+
 export default routes;
