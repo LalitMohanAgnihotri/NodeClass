@@ -13,7 +13,7 @@ routes.get("/user",getuser);
 routes.get("/user/:id",getuserById);
 routes.post("/user",adduser);
 
- 
+
 routes
 .route("/user")
 .get(getuser)
